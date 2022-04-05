@@ -1,0 +1,57 @@
+ create database hospital_management;
+
+  use hospital_management;
+
+create table doctorslist (id int primary key,DoctorName varchar(40),Gender varchar(40),Password varchar(40),Contact_Number varchar(40),Address varchar(40),Specialization varchar(40),Experience int,salary int,Action varchar(40));
+
+desc doctorslist;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| id             | int         | NO   | PRI | NULL    |       |
+| DoctorName     | varchar(40) | YES  |     | NULL    |       |
+| Gender         | varchar(40) | YES  |     | NULL    |       |
+| Password       | varchar(40) | YES  |     | NULL    |       |
+| Contact_Number | int         | YES  |     | NULL    |       |
+| Address        | varchar(40) | YES  |     | NULL    |       |
+| Specialization | varchar(40) | YES  |     | NULL    |       |
+| Experience     | int         | YES  |     | NULL    |       |
+| salary         | int         | YES  |     | NULL    |       |
+| Action         | varchar(40) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+
+ insert into doctorslist values(1,'Dr.Naresh','male','naresh@1','8106859050','Anantapur','Dermatology','2','500000','abc');
+insert into doctorslist values(2,'Dr.mark','male','mark@20','9997677879','Pune','Cardiology','3','600000','def');
+insert into doctorslist values(3,'Dr.William','male','william@03','8807677879','Luckow','Orthopedics','16','70000000','lmn');
+insert into doctorslist values(4,'Dr.Myles','male','myles@04','8805687879','California','Gynecologist','20','9000000','nmo');
+insert into doctorslist values(5,'Dr.Abbas','male','abbas@05','8807654369','Washington','Neurology','16','10000000','xyz');
+insert into doctorslist values(6,'Dr.Khalid','male','khalid@05','8803217879','Newyork','Neuro','6','50000000','pqr');
+
+
+select * from doctorslist;
+
+
++----+------------+--------+------------+----------------+------------+----------------+------------+----------+--------+
+| id | DoctorName | Gender | Password   | Contact_Number | Address    | Specialization | Experience | salary   | Action |
++----+------------+--------+------------+----------------+------------+----------------+------------+----------+--------+
+|  1 | Dr.Naresh  | male   | naresh@1   | 8106859050     | Anantapur  | Dermatology    |          2 |   500000 | abc    |
+|  2 | Dr.mark    | male   | mark@20    | 9997677879     | Pune       | Cardiology     |          3 |   600000 | def    |
+|  3 | Dr.William | male   | william@03 | 8807677879     | Luckow     | Orthopedics    |         16 | 70000000 | lmn    |
+|  4 | Dr.Myles   | male   | myles@04   | 8805687879     | California | Gynecologist   |         20 |  9000000 | nmo    |
+|  5 | Dr.Abbas   | male   | abbas@05   | 8807654369     | Washington | Neurology      |         16 | 10000000 | xyz    |
+|  6 | Dr.Khalid  | male   | khalid@05  | 8803217879     | Newyork    | Neuro          |          6 | 50000000 | pqr    |
++----+------------+--------+------------+----------------+------------+----------------+------------+----------+--------+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Create table admin_sign_up(id int primary key,emild id varchar(40),password varchar(40),user name varchar(30));
+
+INSERT INTO `hospital_management`.`admin_sign_up` (`id`, `email_id`, `password`, `user_name`) VALUES ('1', 'abc@gmail.com', 'abc@gmail.com', 'abc@gmail.com');
+
+INSERT INTO `hospital_management`.`admin_sign_up` (`id`, `email_id`, `password`, `user_name`) VALUES ('2', 'xyzgmail.com', 'xyzgmail.com', 'xyzgmail.com');
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+create table appointments(id int primary key,address varchar(40),ap date int , ap time int,disease varcahr(40),gender varchar(40),patient name varchar(30));
+
+INSERT INTO `hospital_management`.`appointments` (`ap_id`, `address`, `ap_date`, `ap_time`, `d_name`, `disease`, `gender`, `p_name`) VALUES ('1', 'pune', '1/04/2022', '6.30', 'Dr.latha', 'covid', 'male', 'giri');
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+
